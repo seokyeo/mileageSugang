@@ -34,7 +34,7 @@ public class loginInterface extends JFrame {
     }
     ActionListener signUpButtonAction = new ActionListener(){
         public void actionPerformed(ActionEvent e) {
-            //signup();
+            //new signup();
             dispose();
     }
     };

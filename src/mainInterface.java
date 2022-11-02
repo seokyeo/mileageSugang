@@ -21,6 +21,16 @@ public class mainInterface extends JFrame {
         myAccountButton.addActionListener(myAccountButtonAction);
         mainUi.add(myAccountButton);
 
+        JButton sugangButton =new JButton("수강신청");
+        sugangButton.setBounds(50,60,90,30);
+        sugangButton.addActionListener(sugangButtonAction);
+        mainUi.add(sugangButton);
+
+        JButton adminButton = new JButton("관리자모드");
+        adminButton.setBounds(50, 120, 90, 30);
+        adminButton.addActionListener(adminButtonAction);
+        mainUi.add(adminButton);
+
         JButton closeButton = new JButton("닫기");
         closeButton.setBounds(50,90,90,30);
         closeButton.addActionListener(closeButtonAction);
@@ -29,10 +39,21 @@ public class mainInterface extends JFrame {
         setSize(720, 480);
         setVisible(true);
     }
+
     ActionListener myAccountButtonAction = new ActionListener(){
         public void actionPerformed(ActionEvent e) {
-            //myAccount();
+            //new myAccount();
             dispose();
+    }
+    };
+    ActionListener sugangButtonAction = new ActionListener(){
+        public void actionPerformed(ActionEvent e) {
+            dispose();
+    }
+    };
+    ActionListener adminButtonAction = new ActionListener(){
+        public void actionPerformed(ActionEvent e) {
+            new adminInterface();
     }
     };
     ActionListener closeButtonAction = new ActionListener(){
