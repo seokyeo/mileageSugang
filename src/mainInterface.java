@@ -48,7 +48,7 @@ public class mainInterface extends JFrame {
     };
     ActionListener sugangButtonAction = new ActionListener(){
         public void actionPerformed(ActionEvent e) {
-            dispose();
+        new sugangInterface();
     }
     };
     ActionListener adminButtonAction = new ActionListener(){
