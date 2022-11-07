@@ -1,5 +1,3 @@
-import javax.swing.JFrame;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.Container;
@@ -7,53 +5,52 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.jar.Attributes.Name;
 
-
-public class signupInterface extends JFrame {
+public class studentAddInterface extends JFrame {
     JTextField idTextfield, nameTextfield, passwordTextfield, majorTextfield, emailTextfield;
 
-    public signupInterface() {
+    public studentAddInterface() {
         setTitle("회원가입");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-        GridLayout signupUiGrid = new GridLayout(6, 2);
-        signupUiGrid.setVgap(5);
-        signupUiGrid.setHgap(3);
+        GridLayout studentAddUiGrid = new GridLayout(6, 2);
+        studentAddUiGrid.setVgap(5);
+        studentAddUiGrid.setHgap(3);
 
-        Container signupUi = getContentPane();
-        signupUi.setLayout(signupUiGrid);
+        Container studentAddUi = getContentPane();
+        studentAddUi.setLayout(studentAddUiGrid);
 
-        signupUi.add(new JLabel("학번"));
+        studentAddUi.add(new JLabel("학번"));
         idTextfield = new JTextField();
-        signupUi.add(idTextfield);
+        studentAddUi.add(idTextfield);
 
-        signupUi.add(new JLabel("이름"));
+        studentAddUi.add(new JLabel("이름"));
         nameTextfield = new JTextField();
-        signupUi.add(nameTextfield);
+        studentAddUi.add(nameTextfield);
 
-        signupUi.add(new JLabel("비밀번호"));
+        studentAddUi.add(new JLabel("비밀번호"));
         passwordTextfield = new JTextField();
-        signupUi.add(passwordTextfield);
+        studentAddUi.add(passwordTextfield);
 
-        signupUi.add(new JLabel("학과"));
+        studentAddUi.add(new JLabel("학과"));
         majorTextfield = new JTextField();
-        signupUi.add(majorTextfield);
+        studentAddUi.add(majorTextfield);
 
-        signupUi.add(new JLabel("이메일"));
+        studentAddUi.add(new JLabel("이메일"));
         emailTextfield = new JTextField();
-        signupUi.add(emailTextfield);
+        studentAddUi.add(emailTextfield);
 
-        JButton signupButton = new JButton("가입하기");
-        signupButton.addActionListener(signupButtonAction);
-        signupUi.add(signupButton);
+        JButton studentAddButton = new JButton("등록하기");
+        studentAddButton.addActionListener(studentAddButtonAction);
+        studentAddUi.add(studentAddButton);
 
         setLocation(400, 400);
         setSize(320, 180);
         setVisible(true);
     }
 
-    ActionListener signupButtonAction = new ActionListener() {
+    ActionListener studentAddButtonAction = new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-            // signup처리
+            // studentAdd처리
             // 빈칸있으면 오류 반환
             String id = idTextfield.getText();
             System.out.println(id);
@@ -65,12 +62,10 @@ public class signupInterface extends JFrame {
             System.out.println(major);
             String email = emailTextfield.getText();
             System.out.println(email);
-            //if(true) 회원가입성공
-            //studentsignup(id,name,password,major,email);          
-            //else 회원가입 실패,id겹침
+            // if(true) 회원가입성공
+            // studentstudentAdd(id,name,password,major,email);
+            // else 회원가입 실패,id겹침
 
         }
     };
 }
-
-// 수강신청결과를 이메일로 보내주는것까지?

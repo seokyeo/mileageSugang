@@ -14,13 +14,16 @@ public class sugangInterface extends JFrame {
         sugangUi.setLayout(null);
         
         sugangUi.add(new JLabel("강의 목록"));
+        
+        //내정보 띄우기
+        //강의 목록 쭈르륵
 
-        JButton sugangAddButton =new JButton("수강추가");
+        JButton sugangAddButton =new JButton("수강 추가");
         sugangAddButton.setBounds(50,60,90,30);
         sugangAddButton.addActionListener(sugangAddButtonAction);
         sugangUi.add(sugangAddButton);
 
-        JButton sugangDelButton =new JButton("수강추가");
+        JButton sugangDelButton =new JButton("되돌리기");
         sugangDelButton.setBounds(50,90,90,30);
         sugangDelButton.addActionListener(sugangDelButtonAction);
         sugangUi.add(sugangDelButton);

@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class loginInterface extends JFrame {
+    JTextField idTextfield,passwordTextfield;
     public loginInterface() {
 
         setTitle("로그인");
@@ -18,9 +19,13 @@ public class loginInterface extends JFrame {
         loginUi.setLayout(loginUiGrid);
         
         loginUi.add(new JLabel("ID"));
-        loginUi.add(new JTextField(""));
+        idTextfield = new JTextField();
+        loginUi.add(idTextfield);
+
         loginUi.add(new JLabel("Password"));
-        loginUi.add(new JPasswordField(""));
+        passwordTextfield = new JTextField();
+        loginUi.add(passwordTextfield);
+
         JButton signUpButton = new JButton("회원가입");
         signUpButton.addActionListener(signUpButtonAction);
         loginUi.add(signUpButton);
@@ -40,7 +45,14 @@ public class loginInterface extends JFrame {
     };
     ActionListener loginButtonAction = new ActionListener(){
         public void actionPerformed(ActionEvent e) {
-            new mainInterface();
+            String id = idTextfield.getText();
+            System.out.println(id);
+            String password = passwordTextfield.getText();
+            System.out.println(password);
+            if(true){
+                new mainInterface();
+            }
+            else System.out.println("login fail");
             dispose();
     }
     };

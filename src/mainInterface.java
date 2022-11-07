@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 public class mainInterface extends JFrame {
     public mainInterface(){
+
         setTitle("마일리지 수강신청");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
@@ -35,6 +36,7 @@ public class mainInterface extends JFrame {
         closeButton.setBounds(50,90,90,30);
         closeButton.addActionListener(closeButtonAction);
         mainUi.add(closeButton);
+        
 
         setSize(720, 480);
         setVisible(true);

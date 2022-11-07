@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.GregorianCalendar;
 
 public class adminInterface extends JFrame{
     public adminInterface(){
@@ -39,20 +40,18 @@ public class adminInterface extends JFrame{
 
     ActionListener studentAddButtonAction = new ActionListener(){
         public void actionPerformed(ActionEvent e) {
-            //new signup();
-            dispose();
+            new studentAddInterface();
     }
     };
     ActionListener studentDelButtonAction = new ActionListener(){
         public void actionPerformed(ActionEvent e) {
-            //new signup();
+            //new studentdel();
             dispose();
     }
     };
     ActionListener lectureAddButtonAction = new ActionListener(){
         public void actionPerformed(ActionEvent e) {
-            //new lectureAdd();
-            dispose();
+            new lectureAddInterface();
     }
     };
     ActionListener lectureDelButtonAction = new ActionListener(){
