@@ -52,8 +52,10 @@ public class loginInterface extends JFrame {
             if(true){
                 new mainInterface();
             }
-            else System.out.println("login fail");
-            dispose();
+            else {
+                JOptionPane.showMessageDialog(null,"로그인 실패");
+                System.out.println("login fail"); //알림박스로 띄우기
+            }
     }
     };
 }

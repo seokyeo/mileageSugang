@@ -9,7 +9,7 @@ public class studentAddInterface extends JFrame {
     JTextField idTextfield, nameTextfield, passwordTextfield, majorTextfield, emailTextfield;
 
     public studentAddInterface() {
-        setTitle("회원가입");
+        setTitle("학생 등록");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         GridLayout studentAddUiGrid = new GridLayout(6, 2);

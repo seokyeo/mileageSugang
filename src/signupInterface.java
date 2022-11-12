@@ -72,5 +72,3 @@ public class signupInterface extends JFrame {
         }
     };
 }
-
-// 수강신청결과를 이메일로 보내주는것까지?

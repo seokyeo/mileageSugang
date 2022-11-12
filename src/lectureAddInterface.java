@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class lectureAddInterface extends JFrame{
-    JTextField lectureNameTextField,lectureCodeTextField,lectureMajorTextField,lectureDivisionTextField;
+    JTextField lectureNameTextField,lecturePointTextField,lectureMajorTextField,lectureDivisionTextField,lectureNumTextField;
     public lectureAddInterface(){
         setTitle("강의추가");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -21,6 +21,10 @@ public class lectureAddInterface extends JFrame{
         lectureNameTextField = new JTextField();
         lectureAddUi.add(lectureNameTextField);
 
+        lectureAddUi.add(new JLabel("학점"));
+        lecturePointTextField = new JTextField();
+        lectureAddUi.add(lecturePointTextField);
+
         lectureAddUi.add(new JLabel("개설학과"));
         lectureMajorTextField = new JTextField();
         lectureAddUi.add(lectureMajorTextField);
@@ -28,6 +32,10 @@ public class lectureAddInterface extends JFrame{
         lectureAddUi.add(new JLabel("구분"));
         lectureDivisionTextField = new JTextField();
         lectureAddUi.add(lectureDivisionTextField);
+
+        lectureAddUi.add(new JLabel("인원"));
+        lectureNumTextField = new JTextField();
+        lectureAddUi.add(lectureNumTextField);
 
         JButton lectureAddButton = new JButton("가입하기");
         lectureAddButton.addActionListener(lectureAddButtonAction);
@@ -43,12 +51,16 @@ public class lectureAddInterface extends JFrame{
             // 빈칸있으면 오류 반환
             String name = lectureNameTextField.getText();
             System.out.println(name);
+            String point = lecturePointTextField.getText();
+            System.out.println(point);
             String major = lectureMajorTextField.getText();
             System.out.println(major);
             String division = lectureDivisionTextField.getText();
             System.out.println(division);
-            
+            String num = lectureNumTextField.getText();
+            System.out.println(num);
 
+        
         }
     };
 
